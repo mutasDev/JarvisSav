@@ -14,20 +14,29 @@ def toggle():
         light.on = True
     else:
         light.on = False
-    return True
+    return "okey"
 
+@app.route("/rgb/<r>/<g>/<b>")
+def data(r, g, b):
+    light = magichue.Light('192.168.0.6')
+    light.on = True
+    light.rgb = (r, g, b)
+    return "okey"
+
+@app.route("/white")
 def white():
     light = magichue.Light('192.168.0.6')
     light.cw = 0
     light.w = 255
     light.on = True
-    light.mode = magichue.NORMAL    
+    light.mode = magichue.NORMAL
+    return "okey"
 
-@app.route("/blue")
+@app.route("/rainbow")
 def blue():
     light = magichue.Light('192.168.0.6')
     light.mode = magichue.RAINBOW_CROSSFADE
-    return True
+    return "okey"
     
 
 if __name__ == "__main__":
