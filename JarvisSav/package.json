@@ -20,6 +20,10 @@
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
     "@kamiazya/ngx-speech-recognition": "^0.4.3",
+    "magic-home": "^2.6.1",
+    "magic-hue-controller": "^1.0.1",
+    "net": "^1.0.2",
+    "onoff": "^6.0.2",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
     "zone.js": "~0.9.1"
